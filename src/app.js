@@ -7,7 +7,7 @@ const app = express();
 
 //  Settings
 app.set("port", appConfig.port);
-
+app.use(cors({ origin: true }));
 //  Last element of whiteList is the front-end development origin.
 const whiteList = [
   "https://coreinventory.netlify.app",
